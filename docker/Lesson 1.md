@@ -1,8 +1,17 @@
+
 **DevOps** is a way of working where developers and operations teams work closely together to build, test, and release software faster and more reliably.
 
 A **DevOps engineer** is a person who helps developers and operations teams work together by automating processes, managing systems, and making sure software is built, tested, and deployed smoothly and reliably.
 
 An **artifact** is a file or result produced during software development, such as a build file, package, or compiled code, that is stored and used later for testing or deployment.
+
+A **pipeline** is an automated sequence of steps that code goes through — such as build, test, and deploy — from the moment it is committed until it is released.
+
+**Staging** is a testing environment that is very similar to production, where code is checked one last time before being released to real users.
+
+**On-demand** means something happens **only when it is requested**, not automatically or continuously.
+
+---
 ### CI/CD
 -  **CI (Continuous Integration)** is a practice where developers regularly merge their code into a shared repository and automatically test it to catch problems early.
 -  **CD (Continuous Delivery / Continuous Deployment)** is a practice where tested code is automatically prepared or released to production, so new changes can reach users quickly and safely.
@@ -10,18 +19,8 @@ An **artifact** is a file or result produced during software development, such a
 **CI (Continuous Integration)** focuses on **testing code**.  
 **CD (Continuous Delivery / Deployment)** focuses on **releasing code**.
 
-- **CI**: Code is merged and **automatically built and tested** to find bugs early.
-- **CD**: After CI passes, code is **automatically delivered or deployed** to servers.    
-
-**Short version:**  
-CI = _check if the code works_  
-CD = _send the code to users_
-
-A **pipeline** is an automated sequence of steps that code goes through — such as build, test, and deploy — from the moment it is committed until it is released.
-
-**Staging** is a testing environment that is very similar to production, where code is checked one last time before being released to real users.
-
-**On-demand** means something happens **only when it is requested**, not automatically or continuously.
+- **CI**: Code is merged and **automatically built and tested** to find bugs early. (_check if the code works_)
+- **CD**: After CI passes, code is **automatically delivered or deployed** to servers.  (_send the code to users_)
 
 ---
 ### Architecture 
