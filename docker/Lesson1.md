@@ -5,7 +5,7 @@ A **DevOps engineer** is a person who helps developers and operations teams work
 
 An **artifact** is a file or result produced during software development, such as a build file, package, or compiled code, that is stored and used later for testing or deployment.
 
-A **pipeline** is an automated sequence of steps that code goes through - such as build, test, and deploy - from the moment it is committed until it is released.
+A **pipeline** is an automated sequence of steps that code goes through — such as build, test, and deploy — from the moment it is committed until it is released.
 
 **Staging** is a testing environment that is very similar to production, where code is checked one last time before being released to real users.
 
@@ -112,7 +112,7 @@ sudo docker info
 #### Download an image from a registry
 
 ```shell
-sudo docker pull <repository:tag>
+sudo docker pull <repository[:tag]>
 ```
 
 -  **repository** *is the name of the image collection, usually representing an application or service (for example: `nginx`, `python`, `myapp/backend`).*
@@ -140,11 +140,35 @@ sudo docker images -a # Show all images (default hides intermediate images)
 sudo docker images -q # Only show image IDs
 ```
 
+```shell
+sudo docker ps -n <int> # Show n last created containers (includes all states) (default -1)
+```
+
+```shell
+sudo docker ps -l # Show the latest created container (includes all states)
+```
+
+```shell
+sudo docker ps -s # Display total file sizes
+```
+
+```shell
+sudo docker ps -a -f status=<status>
+```
+
+-  **created** - *The container is created but **has not started** yet.*
+-  **running** - *The container’s main process is **currently running**.*
+-  **paused** - *The container is temporarily **frozen** (processes are stopped using cgroups).*
+-  **restarting** - *The container is **stopping and starting again** (usually due to a restart policy).*
+-  **removing** - *The container is in the process of **being deleted**.*
+-  **exited** - *The container has **stopped** because its main process ended or crashed.*
+-  **dead** - *The container **failed to stop or be removed cleanly** and is in an inconsistent state.*
+
 ---
 #### Create and run a new container (instance) from an image
 
 ```shell
-sudo docker run <repository:tag>
+sudo docker run <repository[:tag]>
 ```
 
 ---
@@ -153,11 +177,11 @@ sudo docker run <repository:tag>
 **Note**: Docker Hub is the default registry.
 
 ```shell
-sudo docker pull <docker-hub>/<repository:tag>
+sudo docker pull <docker-hub>/<repository[:tag]>
 ```
 
 ```shell
-sudo docker run <docker-hub>/<repository:tag>
+sudo docker run <docker-hub>/<repository[:tag]>
 ```
 ---
 #### List containers
