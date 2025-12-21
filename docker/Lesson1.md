@@ -5,7 +5,7 @@ A **DevOps engineer** is a person who helps developers and operations teams work
 
 An **artifact** is a file or result produced during software development, such as a build file, package, or compiled code, that is stored and used later for testing or deployment.
 
-A **pipeline** is an automated sequence of steps that code goes through — such as build, test, and deploy — from the moment it is committed until it is released.
+A **pipeline** is an automated sequence of steps that code goes through - such as build, test, and deploy - from the moment it is committed until it is released.
 
 **Staging** is a testing environment that is very similar to production, where code is checked one last time before being released to real users.
 
