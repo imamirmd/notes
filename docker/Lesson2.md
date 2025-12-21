@@ -1,5 +1,5 @@
 
-**Note**: Linux Docker images can run on Windows using a Linux VM (WSL2 or Hyper-V), but Windows images require the Windows kernel and cannot run on Linux.
+**Note**: ==Linux Docker images can run on Windows using a Linux VM (WSL2 or Hyper-V), but Windows images require the Windows kernel and cannot run on Linux.==
 
 **Containers** run applications by sharing the host OS kernel, making them lightweight and fast, while **virtual machines** run full operating systems, making them heavier but more isolated.
 
@@ -56,7 +56,7 @@ The idea of **containers** started in the early 2000s with Unix technologies lik
 	-  **Namespaces** isolate processes, users, networks, mounts
 	-  **cgroups** limit and control CPU, memory, and I/O
 	
-	Together, these features made true OS-level containers possible.
+	Together, these features made ==true OS-level containers possible==.
 
 -  **2008 – LXC (Linux Containers)**  
 
@@ -288,7 +288,7 @@ sudo docker info | grep -i "live restore" # must be true
 -  When `dockerd` restarts, **shim keeps the container processes alive**
 -  After restart, `dockerd` **reconnects to containerd** and regains control
 
-Containers don’t die because their **parent process is the shim**, not `dockerd`.
+==Containers don’t die because their **parent process is the shim**, not `dockerd`.==
 
 **Note**: If **`containerd` dies**, **running containers keep running**, but **management is lost temporarily**. 
 
